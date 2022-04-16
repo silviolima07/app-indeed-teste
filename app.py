@@ -132,7 +132,6 @@ def wc(df):
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
         st.pyplot()
-@st.cache
 def read_data():
     # Leitura dos Datasets
     df_AD  = pd.read_csv(lista_AD[0])
@@ -169,7 +168,7 @@ def main():
 
     st.sidebar.image(scrap,caption="", width=300)
 
-    activities = ["Home",'Cientista de Dados', 'Analista de Dados', 'Engenheiro de Machine Learning', 'Engenheiro de Dados',"About"]
+    activities = ["Home",'Word Cloud','Cientista de Dados', 'Analista de Dados', 'Engenheiro de Machine Learning', 'Engenheiro de Dados',"About"]
     lista_CD= []
     lista_AD=[]
     lista_EML=[]
@@ -241,11 +240,20 @@ def main():
 
         col22.header("Engenheiro de Dados")
         col22.image(aguia4, width=300)
-        
+    
     elif choice == activities[1]: # CD
+        #st.sidebar.image(aguia1,caption="", width=300)
+      
+        
+        if st.button('Cientista de Dados'):
+            wc(df_CD)
+        if st.button("Analista de Dados"):
+            wc(df_AD        
+    
+    elif choice == activities[2]: # CD
         st.sidebar.image(aguia1,caption="", width=300)
         df = df_CD
-        st.title(activities[1])
+        st.title(activities[2])
         st.subheader("Vagas: "+str(lista_CD[1]))
         st.table(df)
         file = lista_CD[0].replace('CSV/','')
@@ -254,10 +262,10 @@ def main():
         if st.button('WordCloud'):
             wc(df)
         
-    elif choice == activities[2]: # AD
+    elif choice == activities[3]: # AD
         st.sidebar.image(aguia2,caption="", width=300)
         df = df_AD
-        st.title(activities[2])
+        st.title(activities[3])
         st.subheader("Vagas: "+str(lista_AD[1]))
         st.table(df)
         file = lista_AD[0].replace('CSV/','')
@@ -266,10 +274,10 @@ def main():
         if st.button('WordCloud'):
             wc(df)        
    
-    elif choice == activities[3]: # EML
+    elif choice == activities[4]: # EML
         st.sidebar.image(aguia3,caption="", width=300)
         df = df_EML
-        st.title(activities[3])
+        st.title(activities[4])
         st.subheader("Vagas: "+str(lista_EML[1]))
         st.table(df)
         file = lista_EML[0].replace('CSV/','')
@@ -278,11 +286,11 @@ def main():
         if st.button('WordCloud'):
             wc(df)
 
-    elif choice == activities[4]: # ED
+    elif choice == activities[5]: # ED
     
         st.sidebar.image(aguia4,caption="", width=300)
         df = pd.read_csv(lista_ED[0])
-        st.title(activities[4])
+        st.title(activities[5])
         st.subheader("Vagas: "+str(lista_ED[1]))
         st.table(df)
         file = lista_ED[0].replace('CSV/','')
