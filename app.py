@@ -18,7 +18,7 @@ def cloud(image, text, max_word, max_font, random):
                 stopwords=stopwords, max_font_size=max_font, random_state=random)
     # generate word cloud
     wc.generate(text)
-
+    """
     # create coloring from image
     image_colors = ImageColorGenerator(image)
 
@@ -34,7 +34,7 @@ def cloud(image, text, max_word, max_font, random):
         ax.set_axis_off()
     
     st.pyplot()
-    
+    """
    
 
 
