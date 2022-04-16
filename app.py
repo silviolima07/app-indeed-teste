@@ -1,10 +1,11 @@
 from PIL import Image
 import numpy as np
-import matplotlib.pyplot as plt
 import streamlit as st
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 
 import streamlit as st
+
+import matplotlib.pyplot as plt
 
 from bokeh.models.widgets import Div
 
