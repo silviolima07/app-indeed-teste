@@ -51,10 +51,10 @@ def freq(str):
     unique_words = set(str_list)
 
     # Lib de palavras stopwords
-    #nltk.download('stopwords')
+    nltk.download('stopwords')
     #
-    #stopwords = nltk.corpus.stopwords.words('portuguese')
-    stopwords = ['a','de']
+    stopwords = nltk.corpus.stopwords.words('portuguese')
+    #stopwords = ['a','de']
     
     # Eliminar de lista unique_words as palavras irrelevantes tipo: de, a, em
     dataset = unique_words
@@ -115,7 +115,7 @@ def wc(df):
         
 
         # Cria a wordcloud baseada nos valores no dicionario gerado
-        wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
+        wc = WordCloud(width=800, height=400, max_words=100).generate_from_frequencies(data)
         
         # show
         
@@ -237,7 +237,6 @@ def main():
         st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
         
         if st.button('WordCloud'):
-            st.write('...gerando')
             wc(df)
         
     elif choice == activities[2]: # AD
