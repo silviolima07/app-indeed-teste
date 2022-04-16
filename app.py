@@ -265,7 +265,7 @@ def main():
         
         
         
-        st.button('WordCloud'):
+        if st.button('WordCloud'):
             wc(df)
             
         # Remover caracteres, palavras indesejados na coluna Descrição do dataset lido
