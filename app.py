@@ -216,11 +216,11 @@ def main():
         st.write('Última atualizacao: '+ data_update)
 
     # Leitura dos Datasets
-    read_data()
-    #df_AD  = pd.read_csv(lista_AD[0])
-    #df_CD  = pd.read_csv(lista_CD[0])
-    #df_EML = pd.read_csv(lista_EML[0])
-    #df_ED  = pd.read_csv(lista_ED[0])
+    #read_data()
+    df_AD  = pd.read_csv(lista_AD[0])
+    df_CD  = pd.read_csv(lista_CD[0])
+    df_EML = pd.read_csv(lista_EML[0])
+    df_ED  = pd.read_csv(lista_ED[0])
     
 
     if choice == activities[0]:
