@@ -21,7 +21,7 @@ import glob
 
 import re
 
-import nltk
+from nltk.corpus import stopwords
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
