@@ -236,6 +236,10 @@ def main():
         file = lista_CD[0].replace('CSV/','')
         st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
         
+        if st.button('WordCloud'):
+            st.write('...gerando')
+            wc(df)
+        
     elif choice == activities[2]: # AD
         st.sidebar.image(aguia2,caption="", width=300)
         df = pd.read_csv(lista_AD[0])
@@ -243,7 +247,10 @@ def main():
         st.subheader("Vagas: "+str(lista_AD[1]))
         st.table(df)
         file = lista_AD[0].replace('CSV/','')
-        st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)   
+        st.markdown(get_table_download_link(df, file), unsafe_allow_html=True) 
+        
+        if st.button('WordCloud'):
+            wc(df)        
    
     elif choice == activities[3]: # EML
         st.sidebar.image(aguia3,caption="", width=300)
@@ -253,6 +260,9 @@ def main():
         st.table(df)
         file = lista_EML[0].replace('CSV/','')
         st.markdown(get_table_download_link(df,file), unsafe_allow_html=True)
+        
+        if st.button('WordCloud'):
+            wc(df)
 
     elif choice == activities[4]: # ED
         st.sidebar.image(aguia4,caption="", width=300)
