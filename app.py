@@ -21,6 +21,8 @@ import glob
 
 import re
 
+import nltk
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
