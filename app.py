@@ -248,7 +248,7 @@ def main():
         if st.button('Cientista de Dados'):
             wc(df_CD)
         if st.button("Analista de Dados"):
-            wc(df_AD        
+            wc(df_AD)        
     
     elif choice == activities[2]: # CD
         st.sidebar.image(aguia1,caption="", width=300)
