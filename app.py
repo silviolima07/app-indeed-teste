@@ -250,9 +250,8 @@ def main():
         
 
         plt.figure(figsize=(100,100))
-        #fig, axes = plt.subplots(1,2, gridspec_kw={'width_ratios': [3, 2]})
         plt.imshow(wc, interpolation="bilinear")
-        plt.title("WordCloud")
+        st.write("WordCloud")
         st.pyplot()
         
 
