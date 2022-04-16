@@ -10,5 +10,5 @@ tornado==6.1
 typing-extensions==3.7.4.3
 jinja2==3.0.1
 Bokeh==2.2.2
-streamlit==0.80.0
+streamlit==0.68.0
 wordcloud==1.8.1
