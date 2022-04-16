@@ -209,6 +209,13 @@ def main():
     if choice != 'About':
         st.write('Última atualizacao: '+ data_update)
 
+    # Leitura dos Datasets
+    df_AD  = pd.read_csv(lista_AD[0])
+    df_CD  = pd.read_csv(lista_CD[0])
+    df_EML = pd.read_csv(lista_EML[0])
+    df_ED  = pd.read_csv(lista_ED[0])
+    
+
     if choice == activities[0]:
        
         col1, col2 = st.columns(2)
@@ -229,7 +236,7 @@ def main():
         
     elif choice == activities[1]: # CD
         st.sidebar.image(aguia1,caption="", width=300)
-        df = pd.read_csv(lista_CD[0])
+        df = df_CD
         st.title(activities[1])
         st.subheader("Vagas: "+str(lista_CD[1]))
         st.table(df)
@@ -241,7 +248,7 @@ def main():
         
     elif choice == activities[2]: # AD
         st.sidebar.image(aguia2,caption="", width=300)
-        df = pd.read_csv(lista_AD[0])
+        df = df_AD
         st.title(activities[2])
         st.subheader("Vagas: "+str(lista_AD[1]))
         st.table(df)
@@ -253,7 +260,7 @@ def main():
    
     elif choice == activities[3]: # EML
         st.sidebar.image(aguia3,caption="", width=300)
-        df = pd.read_csv(lista_EML[0])
+        df = df_EML
         st.title(activities[3])
         st.subheader("Vagas: "+str(lista_EML[1]))
         st.table(df)
