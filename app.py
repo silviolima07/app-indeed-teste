@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 
-
+import nltk
 
 from bokeh.models.widgets import Div
 
@@ -251,7 +251,7 @@ def main():
 
         plt.figure(figsize=(100,100))
         plt.imshow(wc, interpolation="bilinear")
-        st.write("WordCloud")
+        plt.title('WordCloud de '+choice)
         st.pyplot()
         
 
