@@ -245,16 +245,15 @@ def main():
         
         # show
         
-        plt.figure(figsize = (100, 100), facecolor = None) 
-        plt.imshow(wc, interpolation = 'nearest') 
-        plt.axis("off") 
-        plt.tight_layout(pad = 0) 
+        #plt.figure(figsize = (100, 100), facecolor = None) 
+        #plt.imshow(wc, interpolation = 'nearest') 
+        #plt.axis("off") 
+        #plt.tight_layout(pad = 0) 
     
-        #plt.figure(figsize=(100,100))
-        #fig, axes = plt.subplots(1,2, gridspec_kw={'width_ratios': [3, 2]})
-        #axes[0].imshow(wc, interpolation="bilinear")
-        #plt.title("WordCloud")
-        #st.pyplot()
+        plt.figure(figsize=(100,100))
+        plt.imshow(wc, interpolation="bilinear")
+        plt.title("WordCloud")
+        st.pyplot()
         
 
         
