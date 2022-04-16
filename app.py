@@ -132,6 +132,13 @@ def wc(df):
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
         st.pyplot()
+@cache
+def read_data():
+    # Leitura dos Datasets
+    df_AD  = pd.read_csv(lista_AD[0])
+    df_CD  = pd.read_csv(lista_CD[0])
+    df_EML = pd.read_csv(lista_EML[0])
+    df_ED  = pd.read_csv(lista_ED[0])
     
 
 def main():
@@ -210,10 +217,11 @@ def main():
         st.write('Última atualizacao: '+ data_update)
 
     # Leitura dos Datasets
-    df_AD  = pd.read_csv(lista_AD[0])
-    df_CD  = pd.read_csv(lista_CD[0])
-    df_EML = pd.read_csv(lista_EML[0])
-    df_ED  = pd.read_csv(lista_ED[0])
+    read_data()
+    #df_AD  = pd.read_csv(lista_AD[0])
+    #df_CD  = pd.read_csv(lista_CD[0])
+    #df_EML = pd.read_csv(lista_EML[0])
+    #df_ED  = pd.read_csv(lista_ED[0])
     
 
     if choice == activities[0]:
