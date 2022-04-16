@@ -297,7 +297,6 @@ def main():
         st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
         
         
-        
         if st.button('WordCloud'):
             wc(df)
             
