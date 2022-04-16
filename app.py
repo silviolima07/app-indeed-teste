@@ -94,6 +94,44 @@ def make_clickable(link):
     text = link
     return f'<a target="_blank" href="{link}">Link da vaga</a>' # ou {text} e irá mostrar o link clicável
 
+
+def wc(df):
+
+        # Remover caracteres, palavras indesejados na coluna Descrição do dataset lido
+        desc = clean_desc(df)
+        #
+
+        # Une todos itens/palavras da lista com a descrição numa linha unica
+        string_desc = ' '.join([str(item) for item in desc])
+
+        # Cria duas listas, uma lista word com todas palavras e uma lista com a frequencia dessas palavras na descrição
+        word, count_word = freq(string_desc)
+        #
+
+        # Converter para dict, sendo chave a word e valor a frequencia da palavra
+        data = dict(zip(word, count_word ))
+        #print(data)
+        #
+        
+
+        # Cria a wordcloud baseada nos valores no dicionario gerado
+        wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
+        
+        # show
+        
+
+        plt.figure(figsize=(100,100))
+        plt.imshow(wc, interpolation="bilinear")
+        
+          # Titulo do web app
+        html_wordcloud = """
+    <div style="background-color:blue;padding=30px">
+        <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>WordCloud da Descrição</p>
+    </div>
+              """
+        st.markdown(html_wordcloud, unsafe_allow_html=True)
+        
+        st.pyplot()
     
 
 def main():
@@ -226,37 +264,41 @@ def main():
         st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
         
         
+        
+        st.button('WordCloud'):
+            wc(df)
+            
         # Remover caracteres, palavras indesejados na coluna Descrição do dataset lido
-        desc = clean_desc(df)
+        #desc = clean_desc(df)
         #
 
         # Une todos itens/palavras da lista com a descrição numa linha unica
-        string_desc = ' '.join([str(item) for item in desc])
+        #string_desc = ' '.join([str(item) for item in desc])
 
         # Cria duas listas, uma lista word com todas palavras e uma lista com a frequencia dessas palavras na descrição
-        word, count_word = freq(string_desc)
+        #word, count_word = freq(string_desc)
         #
 
         # Converter para dict, sendo chave a word e valor a frequencia da palavra
-        data = dict(zip(word, count_word ))
+        #data = dict(zip(word, count_word ))
         #print(data)
         #
         
 
         # Cria a wordcloud baseada nos valores no dicionario gerado
-        wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
+        #wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
         
         # show
         
 
-        plt.figure(figsize=(100,100))
-        plt.imshow(wc, interpolation="bilinear")
+        #plt.figure(figsize=(100,100))
+        #plt.imshow(wc, interpolation="bilinear")
         
           # Titulo do web app
-        html_wordcloud = """
-    <div style="background-color:blue;padding=30px">
-        <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>WordCloud da Descrição</p>
-    </div>
+        #html_wordcloud = """
+    #<div style="background-color:blue;padding=30px">
+    #    <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>WordCloud da Descrição</p>
+    #</div>
               """
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
