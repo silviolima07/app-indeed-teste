@@ -300,9 +300,9 @@ def main():
     #    <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>WordCloud da Descrição</p>
     #</div>
     #          """
-        st.markdown(html_wordcloud, unsafe_allow_html=True)
+    #    st.markdown(html_wordcloud, unsafe_allow_html=True)
         
-        st.pyplot()
+    #    st.pyplot()
         
 
         
