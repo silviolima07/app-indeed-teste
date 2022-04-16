@@ -223,17 +223,6 @@ def main():
         file = lista_ED[0].replace('CSV/','')
         st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
         
-        image = st.file_uploader("Choose a file(preferably a silhouette)")
-        text = st.text_area("Add text ..")
-        if image and text is not None:
-            if st.button("Plot"):
-                st.write("### Original image")
-                image = np.array(Image.open(image))
-                # st.image(image, width=100, use_column_width=True)
-       
-                st.write("### Word cloud")
-                st.write(cloud(image, text, max_word, max_font, random), use_column_width=True)
-            
         
         # Remover caracteres, palavras indesejados na coluna Descrição do dataset lido
         desc = clean_desc(df)
@@ -259,22 +248,9 @@ def main():
         plt.figure(figsize=(100,100))
         fig, axes = plt.subplots(1,2, gridspec_kw={'width_ratios': [3, 2]})
         axes[0].imshow(wc, interpolation="bilinear")
-        # recolor wordcloud and show
-        # we could also give color_func=image_colors directly in the constructor
-        # axes[1].imshow(wc.recolor(color_func=image_colors), interpolation="bilinear")
-        #axes[1].imshow(image, cmap=plt.cm.gray, interpolation="bilinear")
-        #for ax in axes:
-        #    ax.set_axis_off()
-    
+        plt.title("WordCloud")
         st.pyplot()
-        #
-        #cargo = choice
-        # Plota a wordcloud gerada
-        #plt.figure(figsize=(10, 10))
-        #plt.imshow(wc, interpolation='bilinear')
-        #plt.axis('off')
-        #plt.title("Wordcloud da Descrição\n "+cargo)
-        #plt.show()
+        
 
         
     elif choice == 'About':
