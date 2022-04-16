@@ -132,7 +132,7 @@ def wc(df):
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
         st.pyplot()
-@cache
+@st.cache
 def read_data():
     # Leitura dos Datasets
     df_AD  = pd.read_csv(lista_AD[0])
