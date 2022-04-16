@@ -221,7 +221,7 @@ def main():
         file = lista_ED[0].replace('CSV/','')
         st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
             
-        
+        """
         # Remover caracteres, palavras indesejados na coluna Descrição do dataset lido
         desc = clean_desc(df)
         #
@@ -247,7 +247,7 @@ def main():
         plt.axis('off')
         plt.title("Wordcloud da Descrição\n "+cargo)
         plt.show()
-
+        """
         
     elif choice == 'About':
         #st.sidebar.image(about,caption="", width=300, height= 200)
