@@ -239,7 +239,6 @@ def main():
         data = dict(zip(word, count_word ))
         #print(data)
         #
-        
 
         # Cria a wordcloud baseada nos valores no dicionario gerado
         wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
