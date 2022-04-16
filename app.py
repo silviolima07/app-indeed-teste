@@ -295,43 +295,55 @@ def main():
         
         
         
-        wc(df)
+        #wc(df)
             
         # Remover caracteres, palavras indesejados na coluna Descrição do dataset lido
-        #desc = clean_desc(df)
+        desc = clean_desc(df)
         #
 
         # Une todos itens/palavras da lista com a descrição numa linha unica
-        #string_desc = ' '.join([str(item) for item in desc])
+        string_desc = ' '.join([str(item) for item in desc])
 
         # Cria duas listas, uma lista word com todas palavras e uma lista com a frequencia dessas palavras na descrição
-        #word, count_word = freq(string_desc)
+        word, count_word = freq(string_desc)
         #
 
         # Converter para dict, sendo chave a word e valor a frequencia da palavra
-        #data = dict(zip(word, count_word ))
+        data = dict(zip(word, count_word ))
         #print(data)
         #
         
 
         # Cria a wordcloud baseada nos valores no dicionario gerado
-        #wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
+        wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
         
         # show
         
 
-        #plt.figure(figsize=(100,100))
-        #plt.imshow(wc, interpolation="bilinear")
+        plt.figure(figsize=(100,100))
+        plt.imshow(wc, interpolation="bilinear")
         
-          # Titulo do web app
-        #html_wordcloud = """
-    #<div style="background-color:blue;padding=30px">
-    #    <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>WordCloud da Descrição</p>
-    #</div>
-    #          """
-    #    st.markdown(html_wordcloud, unsafe_allow_html=True)
+        # Titulo do web app
+        html_wordcloud = """
+    <div style="background-color:blue;padding=30px">
+        <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>WordCloud da Descrição</p>
+    </div>
+              """
+        st.markdown(html_wordcloud, unsafe_allow_html=True)
         
-    #    st.pyplot()
+        wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
+        #
+        cargo = "Analista de Dados"
+        # Plota a wordcloud gerada
+        fig = plt.figure(figsize=(6, 8), dpi=150)
+        plt.imshow(wc, interpolation='bilinear')
+        plt.axis('off')
+        plt.title("Wordcloud da Descrição\n "+cargo)
+        plt.show()
+        fig.savefig('wordcloud-AD.png')
+        
+        image = Image.open('wordcloud-AD.png')
+        image.show()
         
 
         
