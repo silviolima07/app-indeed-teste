@@ -101,12 +101,12 @@ def main():
     """Indeed App """
 
     # Titulo do web app
-    html_page = """
+    html_indeed = """
     <div style="background-color:blue;padding=30px">
         <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>Indeed</p>
     </div>
               """
-    st.markdown(html_page, unsafe_allow_html=True)
+    st.markdown(html_indeed, unsafe_allow_html=True)
    
     html_page = """
     <div style="background-color:white;padding=20px">
@@ -251,7 +251,15 @@ def main():
 
         plt.figure(figsize=(100,100))
         plt.imshow(wc, interpolation="bilinear")
-        plt.title('WordCloud de '+choice)
+        
+          # Titulo do web app
+        html_wordcloud = """
+    <div style="background-color:blue;padding=30px">
+        <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>WordCloud da Descrição</p>
+    </div>
+              """
+        st.markdown(html_wordcloud, unsafe_allow_html=True)
+        
         st.pyplot()
         
 
