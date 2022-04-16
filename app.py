@@ -16,7 +16,7 @@ import glob
 
 import re
 
-#from wordcloud import WordCloud
+from wordcloud import WordCloud
 
 #import matplotlib.pyplot as plt
 
