@@ -344,7 +344,6 @@ def main():
         
         image = Image.open('wordcloud-AD.png')
         image.show()
-        
 
         
     elif choice == 'About':
