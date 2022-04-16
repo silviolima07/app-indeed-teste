@@ -295,7 +295,7 @@ def main():
         
         
         
-         wc(df)
+        wc(df)
             
         # Remover caracteres, palavras indesejados na coluna Descrição do dataset lido
         #desc = clean_desc(df)
