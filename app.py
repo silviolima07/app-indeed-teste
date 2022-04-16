@@ -115,13 +115,13 @@ def wc(df):
         
 
         # Cria a wordcloud baseada nos valores no dicionario gerado
-        wc = WordCloud(width=800, height=400, max_words=100).generate_from_frequencies(data)
+        wc = WordCloud(width=400, height=400, max_words=100).generate_from_frequencies(data)
         
         # show
         
 
         plt.figure(figsize=(100,100))
-        plt.imshow(wc, interpolation="bilinear")
+        plt.imshow(wc)
         
           # Titulo do web app
         html_wordcloud = """
