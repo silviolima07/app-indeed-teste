@@ -299,7 +299,7 @@ def main():
     #<div style="background-color:blue;padding=30px">
     #    <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>WordCloud da Descrição</p>
     #</div>
-              """
+    #          """
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
         st.pyplot()
