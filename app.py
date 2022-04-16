@@ -245,11 +245,17 @@ def main():
         wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
         
         # show
-        plt.figure(figsize=(100,100))
+        
+        plt.figure(figsize = (100, 100), facecolor = None) 
+        plt.imshow(wc, interpolation = 'nearest') 
+        plt.axis("off") 
+        plt.tight_layout(pad = 0) 
+    
+        #plt.figure(figsize=(100,100))
         #fig, axes = plt.subplots(1,2, gridspec_kw={'width_ratios': [3, 2]})
-        axes[0].imshow(wc, interpolation="bilinear")
-        plt.title("WordCloud")
-        st.pyplot()
+        #axes[0].imshow(wc, interpolation="bilinear")
+        #plt.title("WordCloud")
+        #st.pyplot()
         
 
         
