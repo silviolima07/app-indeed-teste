@@ -122,14 +122,14 @@ def wc(df):
         
         # Titulo do web app
         html_wordcloud = """
-    <div style="background-color:white;padding=30px">
-        <p style='text-align:center;font-size:30px;font-weight:bold;color:blue'>WordCloud da Descrição</p>
+    <div style="background-color:blue;padding=25px">
+        <p style='text-align:center;font-size:20px;font-weight:bold;color:white'>WordCloud da Descrição</p>
     </div>
               """
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
         # Plota a wordcloud gerada
-        fig = plt.figure(figsize=(6,8), dpi=200)
+        fig = plt.figure(figsize=(10,8), dpi=150)
         plt.imshow(wc, interpolation='bilinear')
         plt.axis('off')
         #plt.title("Wordcloud da Descrição")
@@ -145,14 +145,14 @@ def main():
     # Titulo do web app
     html_indeed = """
     <div style="background-color:blue;padding=30px">
-        <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>Indeed</p>
+        <p style='text-align:center;font-size:25px;font-weight:bold;color:white'>Indeed</p>
     </div>
               """
     st.markdown(html_indeed, unsafe_allow_html=True)
    
     html_page = """
     <div style="background-color:white;padding=30px">
-        <p style='text-align:center;font-size:30px;font-weight:bold;color:blue'>Scrap de Oportunidades Abertas em Data Science</p>
+        <p style='text-align:center;font-size:25px;font-weight:bold;color:blue'>Scrap de Oportunidades Abertas em Data Science</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)
