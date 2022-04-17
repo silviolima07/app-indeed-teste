@@ -246,7 +246,7 @@ def main():
         if st.button("Engenheiro de Dados"):
             wc(pd.read_csv(lista_ED[0]))   
 
-        col1, col2, col3 , col4, col5 = st.beta_columns(5)
+        col1, col2, col3 , col4, col5 = st.columns(5)
 
         with col1:
             pass
@@ -257,8 +257,8 @@ def main():
         with col5:
             pass
         with col3 :
-            center_button = st.button('Button')
-            wc(pd.read_csv(lista_ED[0]))
+            if st.button("Engenheiro de Dados"):
+                wc(pd.read_csv(lista_ED[0]))  
                         
     
     elif choice == activities[2]: # CD
