@@ -244,7 +244,22 @@ def main():
         if st.button("Engenheiro de Machine Learning"):
             wc(pd.read_csv(lista_EML[0]))
         if st.button("Engenheiro de Dados"):
-            wc(pd.read_csv(lista_ED[0]))            
+            wc(pd.read_csv(lista_ED[0]))   
+
+        col1, col2, col3 , col4, col5 = st.beta_columns(5)
+
+        with col1:
+            pass
+        with col2:
+            pass
+        with col4:
+            pass
+        with col5:
+            pass
+        with col3 :
+            center_button = st.button('Button')
+            wc(pd.read_csv(lista_ED[0]))
+                        
     
     elif choice == activities[2]: # CD
         st.sidebar.image(aguia1,caption="", width=300)
