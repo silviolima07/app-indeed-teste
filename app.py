@@ -252,7 +252,7 @@ def main():
     
     elif choice == activities[2]: # CD
         st.sidebar.image(aguia1,caption="", width=300)
-        df = pd.read_csv(lista_CD[0])
+        df = df_CD #pd.read_csv(lista_CD[0])
         st.title(activities[2])
         st.subheader("Vagas: "+str(lista_CD[1]))
         st.table(df)
@@ -263,7 +263,7 @@ def main():
         
     elif choice == activities[3]: # AD
         st.sidebar.image(aguia2,caption="", width=300)
-        df = pd.read_csv(lista_AD[0])
+        df = df_AD # pd.read_csv(lista_AD[0])
         st.title(activities[3])
         st.subheader("Vagas: "+str(lista_AD[1]))
         st.table(df)
@@ -274,7 +274,7 @@ def main():
    
     elif choice == activities[4]: # EML
         st.sidebar.image(aguia3,caption="", width=300)
-        df = pd.read_csv(lista_EML[0])
+        df = df_EML # pd.read_csv(lista_EML[0])
         st.title(activities[4])
         st.subheader("Vagas: "+str(lista_EML[1]))
         st.table(df)
@@ -286,7 +286,7 @@ def main():
     elif choice == activities[5]: # ED
     
         st.sidebar.image(aguia4,caption="", width=300)
-        df = pd.read_csv(lista_ED[0])
+        df = df_ED # pd.read_csv(lista_ED[0])
         st.title(activities[5])
         st.subheader("Vagas: "+str(lista_ED[1]))
         st.table(df)
