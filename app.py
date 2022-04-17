@@ -133,16 +133,10 @@ def wc(df):
         plt.imshow(wc, interpolation='bilinear')
         plt.axis('off')
         #plt.title("Wordcloud da Descrição")
-        plt.show()
+        #plt.show()
         st.pyplot(fig)
         
-def read_data():
-    # Leitura dos Datasets
-    df_AD  = pd.read_csv(lista_AD[0])
-    df_CD  = pd.read_csv(lista_CD[0])
-    df_EML = pd.read_csv(lista_EML[0])
-    df_ED  = pd.read_csv(lista_ED[0])
-    
+
 
 def main():
 
@@ -157,8 +151,8 @@ def main():
     st.markdown(html_indeed, unsafe_allow_html=True)
    
     html_page = """
-    <div style="background-color:white;padding=20px">
-        <p style='text-align:center;font-size:20px;font-weight:bold;color:blue'>Scrap de Oportunidades Abertas em Data Science</p>
+    <div style="background-color:white;padding=30px">
+        <p style='text-align:center;font-size:30px;font-weight:bold;color:blue'>Scrap de Oportunidades Abertas em Data Science</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)
