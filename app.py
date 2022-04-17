@@ -143,15 +143,15 @@ def main():
 
     # Titulo do web app
     html_indeed = """
-    <div style="background-color:blue;padding=35px">
-        <p style='text-align:center;font-size:35px;font-weight:bold;color:white'>Indeed</p>
+    <div style="background-color:blue;padding=30px">
+        <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>Indeed</p>
     </div>
               """
     st.markdown(html_indeed, unsafe_allow_html=True)
    
     html_page = """
-    <div style="background-color:white;padding=35px">
-        <p style='text-align:center;font-size:35px;font-weight:bold;color:blue'>Scrap de Oportunidades Abertas em Data Science</p>
+    <div style="background-color:white;padding=30px">
+        <p style='text-align:center;font-size:30px;font-weight:bold;color:blue'>Scrap de Oportunidades Abertas em Data Science</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)
@@ -291,85 +291,22 @@ def main():
         file = lista_ED[0].replace('CSV/','')
         st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
         
-        #wc(pd.read_csv(lista_ED[0]))
-            
-        # Remover caracteres, palavras indesejados na coluna Descrição do dataset lido
-        #desc = clean_desc(df)
-        #
-
-        # Une todos itens/palavras da lista com a descrição numa linha unica
-        #string_desc = ' '.join([str(item) for item in desc])
-
-        # Cria duas listas, uma lista word com todas palavras e uma lista com a frequencia dessas palavras na descrição
-        #word, count_word = freq(string_desc)
-        #
-
-        # Converter para dict, sendo chave a word e valor a frequencia da palavra
-        #data = dict(zip(word, count_word ))
-        #print(data)
-        #
         
-
-        # Cria a wordcloud baseada nos valores no dicionario gerado
-        #wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
-        
-        # show
-        
-
-        #plt.figure(figsize=(100,100))
-        #plt.imshow(wc, interpolation="bilinear")
-        
-        # Titulo do web app
-        #html_wordcloud = """
-    #<div style="background-color:blue;padding=30px">
-    #    <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>WordCloud da Descrição</p>
-    #</div>
-    #          """
-    #    st.markdown(html_wordcloud, unsafe_allow_html=True)
-        
-        #wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
-        #
-     #   cargo = "Analista de Dados"
-        # Plota a wordcloud gerada
-     #   fig = plt.figure(figsize=(10, 20), dpi=100)
-     #   plt.imshow(wc, interpolation='bilinear')
-     #   plt.axis('off')
-        #plt.title("Wordcloud da Descrição\n "+cargo)
-     #   plt.show()
-     #   st.pyplot(fig)
-        #fig.savefig('wordcloud-AD.png')
-        
-        #image_cloud = Image.open('wordcloud-AD.png')
-        
-        #aguia1 = Image.open("Images/aguia1.png")
-        
-        #st.image(image_cloud,caption="", width=100)
         
 
         
     elif choice == 'About':
-        #st.sidebar.image(about,caption="", width=300, height= 200)
+        
         st.subheader("Built with Streamlit")
         
         st.write("Dados coletados via scrap usando: request e BeautifulSoup.")
-        #st.markdown("A coleta dos dados é feita às 9h, 12h, 15h e 18h")
-        #st.write("Executados via crontab scripts realizam o scrap e atualização do app.")
-        #st.write("Foram definidos 4 cargos apenas para validar o processo.")
-        #st.write("O scrap para o cargo de Engenheiro de Machine Learning trouxe poucas linhas.")
-        #st.write("Para os demais cargos, foram encontradas mais de 100 vagas, distribuídas em diversas páginas.")
+
         st.write("Esse app traz as 60 primeiras páginas apenas.")
-        #st.subheader("Observacao:")
-        #st.write("O codigo html da pagina muda ao longo do tempo e ajustes no scrap são necessarios.")
-        #st.subheader("Versão 02")
-        #st.write(" - incluído o link encurtado da vaga")
+      
         st.subheader("by Silvio Lima")
-        st.write('https://www.linkedin.com/in/silviocesarlima/')
         
-        #if st.button("Linkedin"):
-        #    js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
-        #    html = '<img src onerror="{}">'.format(js)
-        #    div = Div(text=html)
-        #    st.bokeh_chart(div)
+        st.write('https://www.linkedin.com/in/silviocesarlima/')
+       
     
 
        
