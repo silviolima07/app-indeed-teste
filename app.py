@@ -129,10 +129,9 @@ def wc(df):
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
         # Plota a wordcloud gerada
-        fig = plt.figure(figsize=(10,8), dpi=150)
+        fig = plt.figure(figsize=(100,100)) #, dpi=150)
         plt.imshow(wc, interpolation='bilinear')
         plt.axis('off')
-        #plt.title("Wordcloud da Descrição")
         #plt.show()
         st.pyplot(fig)
         
@@ -151,7 +150,7 @@ def main():
     st.markdown(html_indeed, unsafe_allow_html=True)
    
     html_page = """
-    <div style="background-color:white;padding=30px">
+    <div style="background-color:red;padding=30px">
         <p style='text-align:center;font-size:25px;font-weight:bold;color:blue'>Scrap de Oportunidades Abertas em Data Science</p>
     </div>
               """
