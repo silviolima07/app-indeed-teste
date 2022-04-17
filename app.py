@@ -123,7 +123,7 @@ def wc(df):
         # Titulo do web app
         html_wordcloud = """
     <div style="background-color:blue;padding=25px">
-        <p style='text-align:center;font-size:25px;font-weight:bold;color:white'>Extraido da Descrição</p>
+        <p style='text-align:center;font-size:25px;font-weight:bold;color:white'>Termos mais frequentes na Descrição</p>
     </div>
               """
         st.markdown(html_wordcloud, unsafe_allow_html=True)
