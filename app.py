@@ -343,7 +343,7 @@ def main():
         fig.savefig('wordcloud-AD.png')
         
         image = Image.open('wordcloud-AD.png')
-        image.show()
+        st.image(image,caption="", width=300)
 
         
     elif choice == 'About':
