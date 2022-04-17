@@ -129,7 +129,7 @@ def wc(df):
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
         # Plota a wordcloud gerada
-        fig = plt.figure(figsize=(10, 20), dpi=100)
+        fig = plt.figure(figsize=(20, 10), dpi=100)
         plt.imshow(wc, interpolation='bilinear')
         plt.axis('off')
         plt.title("Wordcloud da Descrição")
