@@ -143,15 +143,15 @@ def main():
 
     # Titulo do web app
     html_indeed = """
-    <div style="background-color:blue;padding=30px">
-        <p style='text-align:center;font-size:25px;font-weight:bold;color:white'>Indeed</p>
+    <div style="background-color:blue;padding=35px">
+        <p style='text-align:center;font-size:35px;font-weight:bold;color:white'>Indeed</p>
     </div>
               """
     st.markdown(html_indeed, unsafe_allow_html=True)
    
     html_page = """
-    <div style="background-color:white;padding=30px">
-        <p style='text-align:center;font-size:25px;font-weight:bold;color:blue'>Scrap de Oportunidades Abertas em Data Science</p>
+    <div style="background-color:white;padding=35px">
+        <p style='text-align:center;font-size:35px;font-weight:bold;color:blue'>Scrap de Oportunidades Abertas em Data Science</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)
@@ -230,7 +230,8 @@ def main():
         col11.header("Engenheiro de Dados")
         col11.image(aguia3, width=300)
 
-        col22.header("Engenheiro de Machine Learning")
+        col22.header("Engenheiro de 
+        Machine Learning")
         col22.image(aguia4, width=300)
     
     elif choice == activities[1]: # Wordcloud
