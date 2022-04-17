@@ -96,7 +96,7 @@ def make_clickable(link):
 
 
 def wc(df):
-
+        st.subheader("Funcao WordCloud")
         # Remover caracteres, palavras indesejados na coluna Descrição do dataset lido
         desc = clean_desc(df)
         #
@@ -215,13 +215,6 @@ def main():
     if choice != 'About':
         st.write('Última atualizacao: '+ data_update)
 
-    # Leitura dos Datasets
-    #read_data()
-    df_AD  = pd.read_csv(lista_AD[0])
-    df_CD  = pd.read_csv(lista_CD[0])
-    df_EML = pd.read_csv(lista_EML[0])
-    df_ED  = pd.read_csv(lista_ED[0])
-    
 
     if choice == activities[0]:
        
@@ -246,9 +239,9 @@ def main():
       
         
         if st.button('Cientista de Dados'):
-            wc(df_CD)
+            wc(pd.read_csv(lista_CD[0]))
         if st.button("Analista de Dados"):
-            wc(df_AD)        
+            wc(pd.read_csv(lista_AD[0]))        
     
     elif choice == activities[2]: # CD
         st.sidebar.image(aguia1,caption="", width=300)
