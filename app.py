@@ -243,8 +243,8 @@ def main():
             wc(pd.read_csv(lista_AD[0])) 
         if st.button("Engenheiro de Machine Learning"):
             wc(pd.read_csv(lista_EML[0]))
-        if st.button("Engenheiro de Dados"):
-            wc(pd.read_csv(lista_ED[0]))   
+        #if st.button("Engenheiro de Dados"):
+        #    wc(pd.read_csv(lista_ED[0]))   
 
         col1, col2, col3 , col4, col5 = st.columns(5)
 
