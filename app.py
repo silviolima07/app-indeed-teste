@@ -230,8 +230,7 @@ def main():
         col11.header("Engenheiro de Dados")
         col11.image(aguia3, width=300)
 
-        col22.header("Engenheiro de 
-        Machine Learning")
+        col22.header("Engenheiro de Machine Learning")
         col22.image(aguia4, width=300)
     
     elif choice == activities[1]: # Wordcloud
