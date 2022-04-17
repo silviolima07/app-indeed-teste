@@ -117,13 +117,10 @@ def wc(df):
         # Cria a wordcloud baseada nos valores no dicionario gerado
         wc = WordCloud(width=400, height=400, max_words=100).generate_from_frequencies(data)
         
-        # show
-        
-
         plt.figure(figsize=(100,100))
         plt.imshow(wc)
         
-          # Titulo do web app
+        # Titulo do web app
         html_wordcloud = """
     <div style="background-color:blue;padding=30px">
         <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>WordCloud da Descrição</p>
@@ -236,7 +233,7 @@ def main():
     
     elif choice == activities[1]: # CD
         #st.sidebar.image(aguia1,caption="", width=300)
-      
+
         
         if st.button('Cientista de Dados'):
             wc(pd.read_csv(lista_CD[0]))
@@ -286,7 +283,7 @@ def main():
         file = lista_ED[0].replace('CSV/','')
         st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
         
-        wc(pd.read_csv(lista_ED[0]))
+        #wc(pd.read_csv(lista_ED[0]))
             
         # Remover caracteres, palavras indesejados na coluna Descrição do dataset lido
         desc = clean_desc(df)
@@ -322,7 +319,7 @@ def main():
               """
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
-        wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
+        #wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
         #
         cargo = "Analista de Dados"
         # Plota a wordcloud gerada
