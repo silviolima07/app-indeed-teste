@@ -115,7 +115,7 @@ def wc(df):
         
 
         # Cria a wordcloud baseada nos valores no dicionario gerado
-        wc = WordCloud(width=400, height=400, max_words=100).generate_from_frequencies(data)
+        wc = WordCloud(width=200, height=200, max_words=100).generate_from_frequencies(data)
         
         #plt.figure(figsize=(100,100))
         #plt.imshow(wc)
@@ -123,7 +123,7 @@ def wc(df):
         # Titulo do web app
         html_wordcloud = """
     <div style="background-color:blue;padding=25px">
-        <p style='text-align:center;font-size:20px;font-weight:bold;color:white'>WordCloud da Descrição:<br>Ferramentas e Habilidades</p>
+        <p style='text-align:center;font-size:20px;font-weight:bold;color:white'>WordCloud da Descrição</p>
     </div>
               """
         st.markdown(html_wordcloud, unsafe_allow_html=True)
@@ -162,6 +162,8 @@ def main():
     aguia3 = Image.open("Images/aguia3.png")
     aguia4 = Image.open("Images/aguia4.png")
     scrap  = Image.open("Images/webscrap.jpeg")
+    wc1    = Image.open("Images/wc1.png")
+    #wc2    = Image.open("Images/wc2.png")
 
     st.sidebar.image(scrap,caption="", width=300)
 
@@ -231,14 +233,18 @@ def main():
         col22.header("Engenheiro de Dados")
         col22.image(aguia4, width=300)
     
-    elif choice == activities[1]: # CD
-        #st.sidebar.image(aguia1,caption="", width=300)
+    elif choice == activities[1]: # Wordcloud
+        st.sidebar.image(wc1,caption="", width=300)
 
         
         if st.button('Cientista de Dados'):
             wc(pd.read_csv(lista_CD[0]))
         if st.button("Analista de Dados"):
-            wc(pd.read_csv(lista_AD[0]))        
+            wc(pd.read_csv(lista_AD[0])) 
+        if st.button("Engenheiro de Machine Learning"):
+            wc(pd.read_csv(lista_EML[0]))
+        if st.button("Engenheiro de Dados"):
+            wc(pd.read_csv(lista_ED[0]))            
     
     elif choice == activities[2]: # CD
         st.sidebar.image(aguia1,caption="", width=300)
