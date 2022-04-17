@@ -343,7 +343,11 @@ def main():
         fig.savefig('wordcloud-AD.png')
         
         image = Image.open('wordcloud-AD.png')
-        st.image(image,caption="", width=300)
+        
+        aguia1 = Image.open("Images/aguia1.png")
+        
+        st.image(aguia1,caption="", width=300)
+        
 
         
     elif choice == 'About':
