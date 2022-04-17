@@ -115,7 +115,7 @@ def wc(df):
         
 
         # Cria a wordcloud baseada nos valores no dicionario gerado
-        wc = WordCloud(width=200, height=200, max_words=100).generate_from_frequencies(data)
+        wc = WordCloud(width=300, height=300, max_words=200).generate_from_frequencies(data)
         
         #plt.figure(figsize=(100,100))
         #plt.imshow(wc)
@@ -129,7 +129,7 @@ def wc(df):
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
         # Plota a wordcloud gerada
-        fig = plt.figure(figsize=(12,12), dpi=200)
+        fig = plt.figure(figsize=(12,12), dpi=100)
         plt.imshow(wc, interpolation='bilinear')
         plt.axis('off')
         #plt.show()
