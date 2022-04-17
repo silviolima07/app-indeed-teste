@@ -129,7 +129,7 @@ def wc(df):
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
         # Plota a wordcloud gerada
-        fig = plt.figure(figsize=(100,100)) #, dpi=150)
+        fig = plt.figure(figsize=(10,10), dpi=150)
         plt.imshow(wc, interpolation='bilinear')
         plt.axis('off')
         #plt.show()
