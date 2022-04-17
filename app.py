@@ -163,7 +163,7 @@ def main():
     aguia4 = Image.open("Images/aguia4.png")
     scrap  = Image.open("Images/webscrap.jpeg")
     wc1    = Image.open("Images/wc_ml.png")
-    #wc2    = Image.open("Images/wc2.png")
+    wc2    = Image.open("Images/wc_ml2.png")
 
     st.sidebar.image(scrap,caption="", width=300)
 
@@ -234,7 +234,7 @@ def main():
         col22.image(aguia4, width=300)
     
     elif choice == activities[1]: # Wordcloud
-        st.sidebar.image(wc1,caption="", width=300)
+        st.sidebar.image(wc2,caption="", width=300)
 
         
         if st.button('Cientista de Dados'):
