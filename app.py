@@ -162,7 +162,7 @@ def main():
     aguia3 = Image.open("Images/aguia3.png")
     aguia4 = Image.open("Images/aguia4.png")
     scrap  = Image.open("Images/webscrap.jpeg")
-    wc1    = Image.open("Images/wc1.png")
+    wc1    = Image.open("Images/wc_ml.png")
     #wc2    = Image.open("Images/wc2.png")
 
     st.sidebar.image(scrap,caption="", width=300)
