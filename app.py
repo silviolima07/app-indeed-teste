@@ -335,7 +335,7 @@ def main():
         #
         cargo = "Analista de Dados"
         # Plota a wordcloud gerada
-        fig = plt.figure(figsize=(10, 20), dpi=150)
+        fig = plt.figure(figsize=(10, 20), dpi=100)
         plt.imshow(wc, interpolation='bilinear')
         plt.axis('off')
         #plt.title("Wordcloud da Descrição\n "+cargo)
@@ -346,7 +346,7 @@ def main():
         
         #aguia1 = Image.open("Images/aguia1.png")
         
-        st.image(image_cloud,caption="", width=300)
+        st.image(image_cloud,caption="", width=100)
         
 
         
