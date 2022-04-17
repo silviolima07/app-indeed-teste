@@ -335,9 +335,9 @@ def main():
         #
         cargo = "Analista de Dados"
         # Plota a wordcloud gerada
-        fig = plt.figure(figsize=(6, 8), dpi=150)
+        fig = plt.figure(figsize=(10, 20), dpi=150)
         plt.imshow(wc, interpolation='bilinear')
-        #plt.axis('off')
+        plt.axis('off')
         #plt.title("Wordcloud da Descrição\n "+cargo)
         #plt.show()
         fig.savefig('wordcloud-AD.png')
