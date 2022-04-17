@@ -336,17 +336,17 @@ def main():
         cargo = "Analista de Dados"
         # Plota a wordcloud gerada
         fig = plt.figure(figsize=(6, 8), dpi=150)
-        #plt.imshow(wc, interpolation='bilinear')
+        plt.imshow(wc, interpolation='bilinear')
         #plt.axis('off')
         #plt.title("Wordcloud da Descrição\n "+cargo)
         #plt.show()
         fig.savefig('wordcloud-AD.png')
         
-        image = Image.open('wordcloud-AD.png')
+        image_cloud = Image.open('wordcloud-AD.png')
         
-        aguia1 = Image.open("Images/aguia1.png")
+        #aguia1 = Image.open("Images/aguia1.png")
         
-        st.image(aguia1,caption="", width=300)
+        st.image(image_cloud,caption="", width=300)
         
 
         
