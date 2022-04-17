@@ -167,7 +167,7 @@ def main():
 
     st.sidebar.image(scrap,caption="", width=300)
 
-    activities = ["Home",'Word Cloud','Cientista de Dados', 'Analista de Dados', 'Engenheiro de Machine Learning', 'Engenheiro de Dados',"About"]
+    activities = ["Home",'Word Cloud','Cientista de Dados', 'Analista de Dados', 'Engenheiro de Dados', 'Engenheiro de Machine Learning',"About"]
     lista_CD= []
     lista_AD=[]
     lista_EML=[]
@@ -241,22 +241,11 @@ def main():
             wc(pd.read_csv(lista_CD[0]))
         if st.button("Analista de Dados"):
             wc(pd.read_csv(lista_AD[0])) 
+        if st.button("Engenheiro de Dados"):
+            wc(pd.read_csv(lista_ED[0]))
         if st.button("Engenheiro de Machine Learning"):
-            wc(pd.read_csv(lista_EML[0]))
-        #if st.button("Engenheiro de Dados"):
-        #    wc(pd.read_csv(lista_ED[0]))   
+            wc(pd.read_csv(lista_EML[0]))   
 
-        col1, col2, col3 , col4 = st.columns(4)
-
-        with col1:
-            pass
-        with col2:
-            pass
-        with col3:
-            pass
-        with col4:
-            if st.button("Engenheiro\nde Dados"):
-                col4.image(wc(pd.read_csv(lista_ED[0])))  
                         
     
     elif choice == activities[2]: # CD
@@ -281,18 +270,18 @@ def main():
         
         #wc(pd.read_csv(lista_AD[0]))        
    
-    elif choice == activities[4]: # EML
+    elif choice == activities[4]: # ED
         st.sidebar.image(aguia3,caption="", width=300)
-        df = pd.read_csv(lista_EML[0])
+        df = pd.read_csv(lista_ED[0])
         st.title(activities[4])
-        st.subheader("Vagas: "+str(lista_EML[1]))
+        st.subheader("Vagas: "+str(lista_ED[1]))
         st.table(df)
-        file = lista_EML[0].replace('CSV/','')
+        file = lista_ED[0].replace('CSV/','')
         st.markdown(get_table_download_link(df,file), unsafe_allow_html=True)
         
         #wc(pd.read_csv(lista_EML[0]))
 
-    elif choice == activities[5]: # ED
+    elif choice == activities[5]: # EML
     
         st.sidebar.image(aguia4,caption="", width=300)
         df = pd.read_csv(lista_ED[0])
@@ -368,7 +357,7 @@ def main():
         #st.write("Foram definidos 4 cargos apenas para validar o processo.")
         #st.write("O scrap para o cargo de Engenheiro de Machine Learning trouxe poucas linhas.")
         #st.write("Para os demais cargos, foram encontradas mais de 100 vagas, distribuídas em diversas páginas.")
-        st.write("Esse app traz as 40 primeiras páginas apenas.")
+        st.write("Esse app traz as 60 primeiras páginas apenas.")
         #st.subheader("Observacao:")
         #st.write("O codigo html da pagina muda ao longo do tempo e ajustes no scrap são necessarios.")
         #st.subheader("Versão 02")
