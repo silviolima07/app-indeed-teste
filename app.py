@@ -255,7 +255,7 @@ def main():
         file = lista_CD[0].replace('CSV/','')
         st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
         
-        wc(pd.read_csv(lista_CD[0]))
+        #wc(pd.read_csv(lista_CD[0]))
         
     elif choice == activities[3]: # AD
         st.sidebar.image(aguia2,caption="", width=300)
@@ -266,7 +266,7 @@ def main():
         file = lista_AD[0].replace('CSV/','')
         st.markdown(get_table_download_link(df, file), unsafe_allow_html=True) 
         
-        wc(pd.read_csv(lista_AD[0]))        
+        #wc(pd.read_csv(lista_AD[0]))        
    
     elif choice == activities[4]: # EML
         st.sidebar.image(aguia3,caption="", width=300)
@@ -277,7 +277,7 @@ def main():
         file = lista_EML[0].replace('CSV/','')
         st.markdown(get_table_download_link(df,file), unsafe_allow_html=True)
         
-        wc(pd.read_csv(lista_EML[0]))
+        #wc(pd.read_csv(lista_EML[0]))
 
     elif choice == activities[5]: # ED
     
@@ -289,7 +289,7 @@ def main():
         file = lista_ED[0].replace('CSV/','')
         st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
         
-        wc(pd.read_csv(lista_ED[0]))
+        #wc(pd.read_csv(lista_ED[0]))
             
         # Remover caracteres, palavras indesejados na coluna Descrição do dataset lido
         #desc = clean_desc(df)
