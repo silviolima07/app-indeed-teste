@@ -96,7 +96,7 @@ def make_clickable(link):
 
 
 def wc(df):
-        st.subheader("Funcao WordCloud")
+        
         # Remover caracteres, palavras indesejados na coluna Descrição do dataset lido
         desc = clean_desc(df)
         #
@@ -122,17 +122,17 @@ def wc(df):
         
         # Titulo do web app
         html_wordcloud = """
-    <div style="background-color:blue;padding=30px">
-        <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>WordCloud da Descrição</p>
+    <div style="background-color:white;padding=30px">
+        <p style='text-align:center;font-size:30px;font-weight:bold;color:blue'>WordCloud da Descrição</p>
     </div>
               """
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
         # Plota a wordcloud gerada
-        fig = plt.figure(figsize=(20, 10), dpi=100)
+        fig = plt.figure(figsize=(20, 20), dpi=150)
         plt.imshow(wc, interpolation='bilinear')
         plt.axis('off')
-        plt.title("Wordcloud da Descrição")
+        #plt.title("Wordcloud da Descrição")
         plt.show()
         st.pyplot(fig)
         
