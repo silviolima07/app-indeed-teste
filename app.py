@@ -246,17 +246,9 @@ def main():
         #if st.button("Engenheiro de Dados"):
         #    wc(pd.read_csv(lista_ED[0]))   
 
-        col1, col2, col3 , col4, col5 = st.columns(5)
+        col1 = st.columns(1)
 
         with col1:
-            pass
-        with col2:
-            pass
-        with col4:
-            pass
-        with col5:
-            pass
-        with col3 :
             if st.button("Engenheiro\nde Dados"):
                 wc(pd.read_csv(lista_ED[0]))  
                         
