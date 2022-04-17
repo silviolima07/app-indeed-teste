@@ -327,14 +327,15 @@ def main():
         plt.imshow(wc, interpolation='bilinear')
         plt.axis('off')
         #plt.title("Wordcloud da Descrição\n "+cargo)
-        #plt.show()
-        fig.savefig('wordcloud-AD.png')
+        plt.show()
+        st.pyplot(fig)
+        #fig.savefig('wordcloud-AD.png')
         
-        image_cloud = Image.open('wordcloud-AD.png')
+        #image_cloud = Image.open('wordcloud-AD.png')
         
         #aguia1 = Image.open("Images/aguia1.png")
         
-        st.image(image_cloud,caption="", width=100)
+        #st.image(image_cloud,caption="", width=100)
         
 
         
