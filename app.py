@@ -122,14 +122,14 @@ def wc(df):
         
         # Titulo do web app
         html_wordcloud = """
-    <div style="background-color:blue;padding=25px">
-        <p style='text-align:center;font-size:20px;font-weight:bold;color:white'>WordCloud da Descrição</p>
+    <div style="background-color:blue;padding=20px">
+        <p style='text-align:center;font-size:20px;font-weight:bold;color:white'>Ferramentas e Conhecimentos</p>
     </div>
               """
         st.markdown(html_wordcloud, unsafe_allow_html=True)
         
         # Plota a wordcloud gerada
-        fig = plt.figure(figsize=(10,10), dpi=150)
+        fig = plt.figure(figsize=(10,10), dpi=200)
         plt.imshow(wc, interpolation='bilinear')
         plt.axis('off')
         #plt.show()
